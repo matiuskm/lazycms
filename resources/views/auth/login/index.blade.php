@@ -19,9 +19,7 @@
                       ]) id="inputEmail" type="email" placeholder="Enter email..."
                          autocomplete="username" value="{{ old('email') }}">
                       <label for="inputEmail">Email</label>
-                      @error('email')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                      @enderror
+                      <x-error.invalid-feedback fieldName="email" />
                    </div>
                    <div class="form-floating mb-3">
                       <input name="password" @class([
@@ -30,9 +28,7 @@
                       ]) class="form-control @error('password') is-invalid @enderror" id="inputPassword" type="password" placeholder="Enter password..."
                          autocomplete="current-password">
                       <label for="inputPassword">Password</label>
-                      @error('password')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                      @enderror
+                      <x-error.invalid-feedback fieldName="password" />
                    </div>
                    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                       <span>
